@@ -1,62 +1,59 @@
-# Generador de Contraseñas Seguras
+# Secure Password Generator
 
-Proyecto simple en Python + Reflex que genera contraseñas seguras a partir de una longitud indicada por el usuario.
+Project in Python + Reflex that generates secure passwords based on a length specified by the user.
 
-Contenido
-- `password_generator/` - Código de la app (componentes Reflex).
-- `requirements.txt` - Dependencias del proyecto.
+Content
+- `password_generator/` - App code (Reflex components).
+- `requirements.txt` - Project dependencies.
 
-Características
-- Genera contraseñas aleatorias (letras, dígitos y símbolos).
-- Longitud mínima recomendada: 8 caracteres.
-- Validaciones de entrada y mensajes de error en la UI.
+Features
+- Generates random passwords (letters, digits, and symbols).
+- Recommended minimum length: 8 characters.
+- Input validation and error messages in the UI.
 
-Requisitos
+Requirements
 - Python 3.12
-- (Opcional) Virtualenv/venv
+- (Optional) Virtualenv/venv
 
-Instalación rápida
-1. Clona el repositorio:
+Quick installation
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/Nakajito/password_generator.git
 cd password_generator
 ```
 
-2. Crea y activa un entorno virtual (recomendado):
+2. Create and activate a virtual environment (recommended):
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Instala dependencias:
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Ejecutar la app (desarrollo)
+Run the app (development)
 
-Esta aplicación está construida con Reflex. Para iniciar el servidor de desarrollo (según configuración local):
+This application is built with Reflex. To start the development server (according to local configuration):
 
 ```bash
 source .venv/bin/activate
 reflex run
 ```
 
-Abre el navegador en la URL que imprima Reflex (por defecto suele ser `http://localhost:3000`).
+Open your browser at the URL printed by Reflex (by default, this is usually `http://localhost:3000`).
 
-Notas sobre la estructura
-- `password_generator/components/` contiene los componentes UI (title, description, generator box).
-- `password_generator/layout/` contiene el footer y layout relacionados.
-- `password_generator/utils.py` incluye la función `generate_password(length)` que se puede probar de forma independiente.
+Notes on structure
+- `password_generator/components/` contains the UI components (title, description, generator box).
+- `password_generator/layout/` contains the footer and related layout.
+- `password_generator/utils.py` includes the `generate_password(length)` function, which can be tested independently.
 
 
-Contribuciones
-- Si quieres contribuir, crea una rama nueva, haz tus cambios y abre un pull request.
-
-Licencia
-- MIT
+Contributions
+- If you want to contribute, create a new branch, make your changes, and open a pull request.
 
 ---
