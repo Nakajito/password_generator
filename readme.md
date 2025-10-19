@@ -1,4 +1,3 @@
-git clone https://github.com/Nakajito/password_generator.git
 # Generador de Contraseñas Seguras
 
 Proyecto simple en Python + Reflex que genera contraseñas seguras a partir de una longitud indicada por el usuario.
