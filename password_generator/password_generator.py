@@ -13,13 +13,25 @@ class State(rx.State):
 
 def index() -> rx.Component:
     # Welcome Page (Index)
-    return rx.container(
-        title_component(),
-        description_component(),
-        generator_psw_box(),
-        footer_component(),
+    return rx.box(
+        rx.container(
+            title_component(),
+            description_component(),
+            generator_psw_box(),
+            footer_component(),
+            size="4",
+        ),
+        # Background with solid color
+        style={
+            "min_height": "100vh",
+            "background": "#EEEEEE",
+        },
     )
 
 
 app = rx.App()
-app.add_page(index)
+app.add_page(
+    index,
+    title="Secure Password Generator | Create Strong Passwords",
+    description="Generate secure and random passwords instantly with our free password generator tool. Create strong passwords with custom length and character combinations.",
+)

@@ -3,55 +3,177 @@ import reflex as rx
 
 def description_component() -> rx.Component:
     """A description component for the password generator app."""
-    return rx.vstack(
-        rx.text(
-            "This is a simple and effective program developed in Python designed to generate secure and random passwords. Its main function is to ask the user for the desired password length and, based on that, create a robust combination of characters.",
-            mb="4",
-        ),
-        rx.text("Key Features:", font_weight="bold", size="5", mb="3"),
+    return rx.box(
         rx.vstack(
-            # Feature 1
-            rx.hstack(
-                rx.icon("circle_check_big", color="green", size=16),
-                rx.text("Random Generation", font_weight="bold"),
-                align_items="center",
-                spacing="2",
+            # Introduction card
+            rx.box(
+                rx.text(
+                    "A simple and effective tool to generate secure and random passwords. Choose your desired length and get a robust combination of characters instantly.",
+                    size="4",
+                    color="#11224E",
+                    line_height="1.7",
+                    text_align="center",
+                ),
+                padding="24px",
+                bg="rgba(203, 217, 155, 0.3)",
+                border_radius="16px",
+                border="1px solid",
+                border_color="#CBD99B",
+                mb="6",
             ),
-            rx.text(
-                "Creates passwords using a mix of letters (upper and lower case), numbers, and special characters to maximize security.",
-                ml="6",
+            # Features section with cards
+            rx.heading(
+                "Key Features",
+                size="6",
+                font_weight="bold",
+                color="#11224E",
                 mb="4",
-                color="gray.600",
+                text_align="center",
             ),
-            # Feature 2
-            rx.hstack(
-                rx.icon("circle_check_big", color="green", size=16),
-                rx.text("Length Recommendation", font_weight="bold"),
-                align_items="center",
-                spacing="2",
+            rx.grid(
+                # Feature 1
+                rx.box(
+                    rx.vstack(
+                        rx.box(
+                            rx.icon("shuffle", size=32, color="#F87B1B"),
+                            padding="12px",
+                            bg="#EEEEEE",
+                            border_radius="12px",
+                            mb="3",
+                        ),
+                        rx.text(
+                            "Random Generation",
+                            font_weight="bold",
+                            size="4",
+                            color="#11224E",
+                            mb="2",
+                        ),
+                        rx.text(
+                            "Uses cryptographically secure random generation with letters, numbers, and special characters.",
+                            size="2",
+                            color="#11224E",
+                            line_height="1.6",
+                            text_align="center",
+                            opacity="0.8",
+                        ),
+                        align_items="center",
+                        spacing="2",
+                    ),
+                    padding="24px",
+                    bg="white",
+                    border_radius="16px",
+                    border="1px solid",
+                    border_color="#EEEEEE",
+                    box_shadow="0 4px 6px rgba(17, 34, 78, 0.08)",
+                    style={
+                        "_hover": {
+                            "box_shadow": "0 10px 20px rgba(248, 123, 27, 0.2)",
+                            "transform": "translateY(-4px)",
+                            "border_color": "#F87B1B",
+                        },
+                        "transition": "all 0.3s ease",
+                    },
+                ),
+                # Feature 2
+                rx.box(
+                    rx.vstack(
+                        rx.box(
+                            rx.icon("gauge", size=32, color="#F87B1B"),
+                            padding="12px",
+                            bg="#EEEEEE",
+                            border_radius="12px",
+                            mb="3",
+                        ),
+                        rx.text(
+                            "Strength Indicator",
+                            font_weight="bold",
+                            size="4",
+                            color="#11224E",
+                            mb="2",
+                        ),
+                        rx.text(
+                            "Real-time password strength evaluation based on length with visual feedback.",
+                            size="2",
+                            color="#11224E",
+                            line_height="1.6",
+                            text_align="center",
+                            opacity="0.8",
+                        ),
+                        align_items="center",
+                        spacing="2",
+                    ),
+                    padding="24px",
+                    bg="white",
+                    border_radius="16px",
+                    border="1px solid",
+                    border_color="#EEEEEE",
+                    box_shadow="0 4px 6px rgba(17, 34, 78, 0.08)",
+                    style={
+                        "_hover": {
+                            "box_shadow": "0 10px 20px rgba(248, 123, 27, 0.2)",
+                            "transform": "translateY(-4px)",
+                            "border_color": "#F87B1B",
+                        },
+                        "transition": "all 0.3s ease",
+                    },
+                ),
+                # Feature 3
+                rx.box(
+                    rx.vstack(
+                        rx.box(
+                            rx.icon("clipboard_check", size=32, color="#F87B1B"),
+                            padding="12px",
+                            bg="#EEEEEE",
+                            border_radius="12px",
+                            mb="3",
+                        ),
+                        rx.text(
+                            "Easy Copy",
+                            font_weight="bold",
+                            size="4",
+                            color="#11224E",
+                            mb="2",
+                        ),
+                        rx.text(
+                            "One-click copy to clipboard with instant visual confirmation for seamless usage.",
+                            size="2",
+                            color="#11224E",
+                            line_height="1.6",
+                            text_align="center",
+                            opacity="0.8",
+                        ),
+                        align_items="center",
+                        spacing="2",
+                    ),
+                    padding="24px",
+                    bg="white",
+                    border_radius="16px",
+                    border="1px solid",
+                    border_color="#EEEEEE",
+                    box_shadow="0 4px 6px rgba(17, 34, 78, 0.08)",
+                    style={
+                        "_hover": {
+                            "box_shadow": "0 10px 20px rgba(248, 123, 27, 0.2)",
+                            "transform": "translateY(-4px)",
+                            "border_color": "#F87B1B",
+                        },
+                        "transition": "all 0.3s ease",
+                    },
+                ),
+                columns="3",
+                spacing="5",
+                width="100%",
+                style={
+                    "@media (max-width: 768px)": {
+                        "grid_template_columns": "1fr",
+                    },
+                },
             ),
-            rx.text(
-                "The program suggests a minimum length of 8 characters to ensure a good level of password strength.",
-                ml="6",
-                mb="4",
-                color="gray.600",
-            ),
-            # Feature 3
-            rx.hstack(
-                rx.icon("circle_check_big", color="green", size=16),
-                rx.text("Error Handling", font_weight="bold"),
-                align_items="center",
-                spacing="2",
-            ),
-            rx.text(
-                "Includes robust validations to handle invalid user input, such as: Non-numeric values and Negative numbers or zero.",
-                ml="6",
-                mb="4",
-                color="gray.600",
-            ),
-            spacing="1",
+            spacing="4",
+            width="100%",
+            max_width="1000px",
+            margin="0 auto",
         ),
-        spacing="2",
-        align_items="start",
-        width="100%",
+        padding="20px",
+        mb="8",
     )
