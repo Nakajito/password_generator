@@ -1,0 +1,27 @@
+{
+  "name": "Secure Password Generator",
+  "short_name": "SecurePass",
+  "description": "Generate secure and random passwords instantly. Free, easy to use, and 100% secure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EEEEEE",
+  "theme_color": "#11224E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["security", "utilities", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

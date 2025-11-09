@@ -1,0 +1,6 @@
+# robots.txt for Secure Password Generator
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://password-generator-neon-orca.reflex.run/sitemap.xml
